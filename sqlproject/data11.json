@@ -1,0 +1,13 @@
+{
+    "name": "John Doe",
+    "age": 30,
+    "address": {
+        "street": "123 Main St",
+        "city": "Springfield",
+        "state": "IL"
+    },
+    "phone_numbers": [
+        {"type": "office", "number": "555-1234"},
+        {"type": "work", "number": "555-5678"}
+    ]
+}

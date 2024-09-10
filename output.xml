@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.9 on win32)" generated="2024-08-22T14:45:17.037642" rpa="false" schemaversion="5">
+<suite id="s1" name="Fileupload" source="C:\Users\tai-0\OneDrive\Documents\robot framework\fileupload.robot">
+<test id="s1-t1" name="Upload File to ExpandTesting" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-22T14:45:17.505106" level="INFO">Opening browser 'edge' to base url 'https://practice.expandtesting.com/upload'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-22T14:45:17.503256" elapsed="6.029725"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-22T14:45:23.532981" elapsed="0.171237"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@type='file']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-22T14:45:23.706302" elapsed="0.078041"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2024-08-22T14:45:23.786253" level="INFO">Sending C:\Users\tai-0\Downloads\variant files.txt to browser.</msg>
+<arg>xpath=//input[@type='file']</arg>
+<arg>${FILE_PATH}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2024-08-22T14:45:23.786158" elapsed="0.084769"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-22T14:45:23.870927" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-22T14:45:23.870927" elapsed="2.609138"/>
+</kw>
+<kw name="Take Screenshot" owner="Screenshot">
+<msg time="2024-08-22T14:45:26.480065" level="WARN">Taking screenshot failed: Taking screenshots is not supported on this platform by default. See library documentation for details.
+Make sure tests are run with a physical or virtual display.</msg>
+<msg time="2024-08-22T14:45:26.480065" level="INFO" html="true">&lt;a href="fileuploaded.png_1.jpg"&gt;&lt;img src="fileuploaded.png_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>fileuploaded.png</arg>
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<status status="PASS" start="2024-08-22T14:45:26.480065" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-22T14:45:26.480065" elapsed="2.426173"/>
+</kw>
+<status status="PASS" start="2024-08-22T14:45:17.499255" elapsed="11.406983"/>
+</test>
+<status status="PASS" start="2024-08-22T14:45:17.048153" elapsed="11.858085"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Fileupload">Fileupload</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-08-22T14:45:26.480065" level="WARN">Taking screenshot failed: Taking screenshots is not supported on this platform by default. See library documentation for details.
+Make sure tests are run with a physical or virtual display.</msg>
+</errors>
+</robot>

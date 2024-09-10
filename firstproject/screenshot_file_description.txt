@@ -1,0 +1,100 @@
+python file:
+---------------------
+import pyautogui
+from robot.api.deco import keyword
+
+@keyword
+def take_screenshot(filename='screenshot.png'):
+    screenshot = pyautogui.screenshot()
+    screenshot.save(filename)
+
+
+
+robot file:
+-------------------
+*** Settings ***
+Library  SeleniumLibrary
+Library    example.py
+
+*** Variables ***
+${BROWSER}  edge
+${URL}  https://www.tutorialspoint.com/selenium/practice/alerts.php
+
+*** Test Cases ***
+Handle Alerts
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+    Sleep    1s
+    Take Screenshot    C:\\Users\\tai-0\\OneDrive\\Desktop\\screenshots\\screenshotusingpy.png   
+
+ description:
+ ------------------
+    1. pyautogui: This is a Python library that allows you to control the mouse and keyboard, as well as automate screen-based tasks like taking screenshots. In this case, it’s used to take a screenshot of the screen.
+    2. keyword: This is a decorator provided by Robot Framework to mark a Python function as a custom keyword. By using this decorator, the function take_screenshot becomes a keyword that can be used directly in Robot Framework test cases.
+    3. @keyword: This decorator indicates that the function take_screenshot is a Robot Framework keyword.
+    def take_screenshot(filename='screenshot.png'):: This line defines a Python function named take_screenshot with a default argument filename. The default value for filename is 'screenshot.png', meaning that if no argument is provided, the screenshot will be saved as screenshot.png.
+    4. pyautogui.screenshot(): This function call takes a screenshot of the entire screen. The screenshot is stored in a variable named screenshot. The variable screenshot is actually an object representing the screenshot, and it can be manipulated using methods from the Pillow (PIL) library, which pyautogui uses internally for image handling.
+    5. screenshot.save(filename): This line saves the screenshot to a file. The save() method is used to save the image object (screenshot) to a file, with the filename specified by the filename argument. If no filename is provided when calling the keyword, the screenshot will be saved as 'screenshot.png'.
+    6. Summary
+    The code defines a custom Robot Framework keyword take_screenshot, which captures a screenshot of the screen using pyautogui.
+    The screenshot is saved to a file with a default name of 'screenshot.png', or another name if specified when calling the keyword.
+    By decorating the function with @keyword, the function can be directly used in Robot Framework test cases as if it were a built-in keyword
+    7. Usage in Robot Framework
+    Once this function is defined in a Python file (e.g., custom_library.py), you can use it in a Robot Framework test case like this:
+
+    robot
+    Copy code
+    *** Settings ***
+    Library    custom_library.py
+
+    *** Test Cases ***
+    Take Screenshot Test
+        Take Screenshot    my_screenshot.png
+    In this example, the Take Screenshot keyword calls the take_screenshot function, capturing the screen and saving it as my_screenshot.png
+
+
+    screenshot with croping:
+    -----------------------------
+    import pyautogui
+    from PIL import Image
+    from robot.api.deco import keyword
+
+    @keyword
+    def take_screenshot2(filename='screenshot.png', crop_area=None):
+        # Take the screenshot
+        screenshot = pyautogui.screenshot()
+
+        # If a crop area is provided, crop the image
+        if crop_area:
+            # Convert the crop_area string to a tuple of integers
+            crop_area = tuple(map(int, crop_area.split(',')))
+            screenshot = screenshot.crop(crop_area)
+
+        # Save the screenshot
+        screenshot.save(filename)
+
+
+        robot file:
+        -------------
+        handle alert and crop
+            Open Browser  ${URL}  ${BROWSER}
+            Maximize Browser Window
+            Sleep    1s
+            Take Screenshot2    C:\\Users\\tai-0\\OneDrive\\Desktop\\screenshots\\screenshotusingpy1.png    0,50,1920,1080
+-----------------------------------------------------------------
+explanation:      
+=================     
+    if crop_area:
+        crop_area = tuple(map(int, crop_area.split(',')))
+        screenshot = screenshot.crop(crop_area)
+if crop_area::
+
+Checks if the crop_area parameter is not None (i.e., if a crop area was provided). If crop_area is None, this block is skipped, and the full screenshot is saved.
+crop_area = tuple(map(int, crop_area.split(','))):
+
+crop_area.split(','): Splits the crop_area string (e.g., "0,50,1920,1080") into a list of strings: ['0', '50', '1920', '1080'].
+map(int, crop_area.split(',')): Converts each string in the list to an integer: [0, 50, 1920, 1080].
+tuple(...): Converts this list of integers into a tuple: (0, 50, 1920, 1080). This tuple represents the bounding box for cropping: (left, top, right, bottom).
+screenshot = screenshot.crop(crop_area):
+
+Crops the screenshot using the crop_area tuple. The crop() method of the Image object takes a tuple defining the area to keep and returns a new Image object that is the cropped result

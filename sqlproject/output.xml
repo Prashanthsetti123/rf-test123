@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.9 on win32)" generated="2024-08-29T16:07:43.854499" rpa="false" schemaversion="5">
+<suite id="s1" name="Samplelocator" source="C:\Users\tai-0\OneDrive\Documents\robot framework\sqlproject\samplelocator.robot">
+<test id="s1-t1" name="open browser and enter login credeentials and click on login" line="8">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-29T16:07:44.198649" level="INFO">Opening browser 'edge' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>https://practicetestautomation.com/practice-test-login/</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-29T16:07:44.198649" elapsed="4.358195"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-29T16:07:48.557501" elapsed="0.060901"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-29T16:07:48.620401" level="INFO">Typing text 'student' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>student</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T16:07:48.619399" elapsed="0.188170"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-29T16:07:50.807827" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-29T16:07:48.807569" elapsed="2.000258"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-29T16:07:50.809424" level="INFO">Typing text 'Password123' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>Password123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T16:07:50.808418" elapsed="0.171409"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-29T16:07:52.982064" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-29T16:07:50.980827" elapsed="2.001237"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-29T16:07:52.983077" level="INFO">Clicking element 'id:submit'.</msg>
+<arg>id:submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T16:07:52.982064" elapsed="1.533993"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-29T16:07:56.517558" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-29T16:07:54.517056" elapsed="2.000502"/>
+</kw>
+<status status="PASS" start="2024-08-29T16:07:44.198649" elapsed="12.318909"/>
+</test>
+<test id="s1-t2" name="enter invalid credentials and take screenshot" line="18">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-29T16:07:56.517558" level="INFO">Opening browser 'edge' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>https://practicetestautomation.com/practice-test-login/</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-29T16:07:56.517558" elapsed="5.659291"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-29T16:08:02.176849" elapsed="0.054793"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-29T16:08:02.231642" level="INFO">Typing text 'student1' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>student1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T16:08:02.231642" elapsed="0.194001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-29T16:08:04.426850" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-29T16:08:02.426641" elapsed="2.000209"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-29T16:08:04.427360" level="INFO">Typing text 'Password1234' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>Password1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T16:08:04.427360" elapsed="0.207955"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-29T16:08:06.636850" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-29T16:08:04.636317" elapsed="2.000533"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-29T16:08:06.636850" level="INFO">Clicking element 'id:submit'.</msg>
+<arg>id:submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-29T16:08:06.636850" elapsed="0.091330"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-29T16:08:08.728495" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-29T16:08:06.728180" elapsed="2.000315"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-08-29T16:08:08.873139" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="failed1.png"&gt;&lt;img src="failed1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>failed1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-08-29T16:08:08.728495" elapsed="0.144644"/>
+</kw>
+<status status="PASS" start="2024-08-29T16:07:56.517558" elapsed="12.355581"/>
+</test>
+<status status="PASS" start="2024-08-29T16:07:43.863012" elapsed="25.010127"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Samplelocator">Samplelocator</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.6 on win32)" generated="2024-09-10T12:17:13.215762" rpa="false" schemaversion="5">
+<suite id="s1" name="Genai" source="C:\Users\tai-0\OneDrive\Documents\robot framework\firstproject\genai.robot">
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary" type="SETUP">
+<arg>10seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-09-10T12:17:13.744866" elapsed="0.000999"/>
+</kw>
+<test id="s1-t1" name="login and search for code on given requirement" line="21">
+<kw name="open browser and use edge browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-10T12:17:13.746866" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-09-10T12:17:13.747882" level="INFO">Opening browser 'chrome' to base url 'https://www.perplexity.ai/'.</msg>
+<msg time="2024-09-10T12:17:13.747882" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-09-10T12:17:13.747882" level="FAIL">AttributeError: 'Options' object has no attribute '--headless'</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>executable_path=C:\\Users\\tai-0\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe</arg>
+<arg>options=--headless=${False}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-09-10T12:17:13.746866" elapsed="0.006778">AttributeError: 'Options' object has no attribute '--headless'</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.753644" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.754646" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.754646" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-10T12:17:13.746866" elapsed="0.007780">AttributeError: 'Options' object has no attribute '--headless'</status>
+</kw>
+<kw name="search for anything">
+<arg>Create a program that prints 'Hello, World!' to the console using Python as the programming language</arg>
+<status status="NOT RUN" start="2024-09-10T12:17:13.754646" elapsed="0.000000"/>
+</kw>
+<kw name="Take screenshot with name">
+<arg>code</arg>
+<status status="NOT RUN" start="2024-09-10T12:17:13.754646" elapsed="0.000998"/>
+</kw>
+<kw name="page down">
+<status status="NOT RUN" start="2024-09-10T12:17:13.755644" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-10T12:17:13.745865" elapsed="0.009779">AttributeError: 'Options' object has no attribute '--headless'</status>
+</test>
+<test id="s1-t2" name="search for image generation" line="27">
+<kw name="open browser and use edge browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-10T12:17:13.760157" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-09-10T12:17:13.760157" level="INFO">Opening browser 'chrome' to base url 'https://www.perplexity.ai/'.</msg>
+<msg time="2024-09-10T12:17:13.761142" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-09-10T12:17:13.761142" level="FAIL">AttributeError: 'Options' object has no attribute '--headless'</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>executable_path=C:\\Users\\tai-0\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe</arg>
+<arg>options=--headless=${False}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-09-10T12:17:13.760157" elapsed="0.002984">AttributeError: 'Options' object has no attribute '--headless'</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.764141" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.764141" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.764141" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-10T12:17:13.757635" elapsed="0.006506">AttributeError: 'Options' object has no attribute '--headless'</status>
+</kw>
+<kw name="search for anything">
+<arg>I need an image of a cat drinking milk from a pot without the owner's knowledge.</arg>
+<status status="NOT RUN" start="2024-09-10T12:17:13.765142" elapsed="0.000000"/>
+</kw>
+<kw name="Take screenshot with name">
+<arg>catimage</arg>
+<status status="NOT RUN" start="2024-09-10T12:17:13.765142" elapsed="0.000000"/>
+</kw>
+<kw name="page down">
+<status status="NOT RUN" start="2024-09-10T12:17:13.765142" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-10T12:17:13.756634" elapsed="0.008508">AttributeError: 'Options' object has no attribute '--headless'</status>
+</test>
+<test id="s1-t3" name="search for text" line="33">
+<kw name="open browser and use edge browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-10T12:17:13.767142" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-09-10T12:17:13.767142" level="INFO">Opening browser 'chrome' to base url 'https://www.perplexity.ai/'.</msg>
+<msg time="2024-09-10T12:17:13.767142" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-09-10T12:17:13.767142" level="FAIL">AttributeError: 'Options' object has no attribute '--headless'</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>executable_path=C:\\Users\\tai-0\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe</arg>
+<arg>options=--headless=${False}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-09-10T12:17:13.766142" elapsed="0.004000">AttributeError: 'Options' object has no attribute '--headless'</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.770142" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.770142" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.770142" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-10T12:17:13.766142" elapsed="0.005000">AttributeError: 'Options' object has no attribute '--headless'</status>
+</kw>
+<kw name="search for anything">
+<arg>what is the meaning of prashanth</arg>
+<status status="NOT RUN" start="2024-09-10T12:17:13.771142" elapsed="0.000000"/>
+</kw>
+<kw name="Take screenshot with name">
+<arg>namemeaning</arg>
+<status status="NOT RUN" start="2024-09-10T12:17:13.771142" elapsed="0.000000"/>
+</kw>
+<kw name="page down">
+<status status="NOT RUN" start="2024-09-10T12:17:13.771142" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-10T12:17:13.766142" elapsed="0.005000">AttributeError: 'Options' object has no attribute '--headless'</status>
+</test>
+<test id="s1-t4" name="search for Text accuracy" line="43">
+<kw name="open browser and use edge browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-10T12:17:13.774145" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-09-10T12:17:13.775144" level="INFO">Opening browser 'chrome' to base url 'https://www.perplexity.ai/'.</msg>
+<msg time="2024-09-10T12:17:13.775144" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-09-10T12:17:13.776159" level="FAIL">AttributeError: 'Options' object has no attribute '--headless'</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>executable_path=C:\\Users\\tai-0\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe</arg>
+<arg>options=--headless=${False}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-09-10T12:17:13.773142" elapsed="0.006002">AttributeError: 'Options' object has no attribute '--headless'</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.779144" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.779144" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.779144" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-10T12:17:13.772142" elapsed="0.008003">AttributeError: 'Options' object has no attribute '--headless'</status>
+</kw>
+<kw name="search for anything">
+<arg>i want the text, not for you ,for me that is i need prashanth logo but dont expose to every one keep it private</arg>
+<status status="NOT RUN" start="2024-09-10T12:17:13.780145" elapsed="0.000000"/>
+</kw>
+<kw name="Take screenshot with name">
+<arg>textaccuracy</arg>
+<status status="NOT RUN" start="2024-09-10T12:17:13.780145" elapsed="0.000000"/>
+</kw>
+<kw name="page down">
+<status status="NOT RUN" start="2024-09-10T12:17:13.780145" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-10T12:17:13.772142" elapsed="0.008003">AttributeError: 'Options' object has no attribute '--headless'</status>
+</test>
+<test id="s1-t5" name="search language transalation" line="48">
+<kw name="open browser and use edge browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-10T12:17:13.782146" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-09-10T12:17:13.782146" level="INFO">Opening browser 'chrome' to base url 'https://www.perplexity.ai/'.</msg>
+<msg time="2024-09-10T12:17:13.783146" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-09-10T12:17:13.783146" level="FAIL">AttributeError: 'Options' object has no attribute '--headless'</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>executable_path=C:\\Users\\tai-0\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe</arg>
+<arg>options=--headless=${False}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-09-10T12:17:13.782146" elapsed="0.002998">AttributeError: 'Options' object has no attribute '--headless'</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.786145" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.786145" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.786145" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-10T12:17:13.781145" elapsed="0.005000">AttributeError: 'Options' object has no attribute '--headless'</status>
+</kw>
+<kw name="search for anything">
+<arg>translate this to telugu "hi how are you"</arg>
+<status status="NOT RUN" start="2024-09-10T12:17:13.786145" elapsed="0.000000"/>
+</kw>
+<kw name="Take screenshot with name">
+<arg>translation</arg>
+<status status="NOT RUN" start="2024-09-10T12:17:13.787146" elapsed="0.000000"/>
+</kw>
+<kw name="page down">
+<status status="NOT RUN" start="2024-09-10T12:17:13.787146" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-10T12:17:13.781145" elapsed="0.006001">AttributeError: 'Options' object has no attribute '--headless'</status>
+</test>
+<test id="s1-t6" name="search for the story and ask questions in followup" line="57">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-10T12:17:13.788146" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-09-10T12:17:13.788146" level="INFO">Opening browser 'chrome' to base url 'https://www.perplexity.ai/'.</msg>
+<msg time="2024-09-10T12:17:13.788146" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-09-10T12:17:13.789146" level="FAIL">AttributeError: 'Options' object has no attribute '--headless'</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<arg>executable_path=C:\\Users\\tai-0\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe</arg>
+<arg>options=--headless=${False}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-09-10T12:17:13.788146" elapsed="0.005000">AttributeError: 'Options' object has no attribute '--headless'</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.794149" elapsed="0.000000"/>
+</kw>
+<kw name="Close Interrupting Element">
+<status status="NOT RUN" start="2024-09-10T12:17:13.794149" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath:${searchElement}</arg>
+<arg>10seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.794149" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.794149" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath:${searchElement}</arg>
+<arg>hi how are you?</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.795146" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://*[@aria-label="Submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.795146" elapsed="0.000000"/>
+</kw>
+<kw name="Take screenshot with name">
+<arg>followup1</arg>
+<status status="NOT RUN" start="2024-09-10T12:17:13.795146" elapsed="0.000000"/>
+</kw>
+<kw name="Close Interrupting Element">
+<status status="NOT RUN" start="2024-09-10T12:17:13.795146" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath:${followsearchElement}</arg>
+<arg>10seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.795146" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath:${followsearchElement}</arg>
+<arg>i want to ask you the story of dog and cat</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.795146" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://*[@aria-label="Submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.796146" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.796146" elapsed="0.000000"/>
+</kw>
+<kw name="Take screenshot with name">
+<arg>story</arg>
+<status status="NOT RUN" start="2024-09-10T12:17:13.796146" elapsed="0.000000"/>
+</kw>
+<kw name="page down">
+<status status="NOT RUN" start="2024-09-10T12:17:13.796146" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>C:\\Users\\tai-0\\OneDrive\\Desktop\\screenshots\\scrollpage.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-09-10T12:17:13.797146" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-10T12:17:13.787146" elapsed="0.010000">AttributeError: 'Options' object has no attribute '--headless'</status>
+</test>
+<doc>This is a test suite for demonstration purposes.</doc>
+<status status="FAIL" start="2024-09-10T12:17:13.218761" elapsed="0.578385"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="6" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="6" skip="0" id="s1" name="Genai">Genai</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-10T12:17:13.746866" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-09-10T12:17:13.760157" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-09-10T12:17:13.767142" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-09-10T12:17:13.774145" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-09-10T12:17:13.782146" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-09-10T12:17:13.788146" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+</errors>
+</robot>

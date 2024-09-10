@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.11.9 on win32)" generated="2024-09-09T19:56:46.118605" rpa="false" schemaversion="5">
+<suite id="s1" name="Genai" source="C:\Users\tai-0\OneDrive\Documents\robot framework\firstproject\genai.robot">
+<test id="s1-t1" name="login and search for code on given requirement" line="22">
+<kw name="open browser and use edge browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:56:46.593210" level="INFO">Opening browser 'edge' to base url 'https://www.perplexity.ai/'.</msg>
+<arg>${url}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-09T19:56:46.592211" elapsed="3.471155"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-09T19:56:50.063366" elapsed="0.069005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:56:51.133411" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:56:50.133371" elapsed="1.000040"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:56:46.591210" elapsed="4.542201"/>
+</kw>
+<kw name="search for anything">
+<kw name="Close Interrupting Element">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:56:51.169076" level="INFO">Element '//*[@id="__next"]/main/div/div/div[2]/div/div/div[4]/div/div/div[1]/button/div' is displayed.</msg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T19:56:51.137418" elapsed="0.031658"/>
+</kw>
+<msg time="2024-09-09T19:56:51.169076" level="INFO">${element_present} = True</msg>
+<var>${element_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-09T19:56:51.136418" elapsed="0.033657"/>
+</kw>
+<if>
+<branch type="IF" condition="${element_present}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:56:51.171075" level="INFO">Clicking element '//*[@id="__next"]/main/div/div/div[2]/div/div/div[4]/div/div/div[1]/button/div'.</msg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:56:51.170075" elapsed="0.092007"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:56:51.170075" elapsed="0.092007"/>
+</branch>
+<status status="PASS" start="2024-09-09T19:56:51.170075" elapsed="0.092007"/>
+</if>
+<status status="PASS" start="2024-09-09T19:56:51.135421" elapsed="0.126661"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath:${searchElement}</arg>
+<arg>10seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T19:56:51.262082" elapsed="0.031002"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:56:53.294583" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:56:51.294082" elapsed="2.000501"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:56:53.296587" level="INFO">Typing text 'Create a program that prints 'Hello, World!' to the console using Python as the programming language' into text field 'xpath://textarea[contains(@placeholder,"Ask anything")]'.</msg>
+<arg>xpath:${searchElement}</arg>
+<arg>${nexttext}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:56:53.295589" elapsed="0.959859"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:56:54.256450" level="INFO">Clicking element 'xpath://*[@aria-label="Submit"]'.</msg>
+<arg>xpath://*[@aria-label="Submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:56:54.255448" elapsed="0.102008"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:56:57.358532" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:56:54.357456" elapsed="3.001076"/>
+</kw>
+<arg>Create a program that prints 'Hello, World!' to the console using Python as the programming language</arg>
+<status status="PASS" start="2024-09-09T19:56:51.134417" elapsed="6.224115"/>
+</kw>
+<kw name="Take screenshot with name">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:00.361043" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:56:57.360534" elapsed="3.000509"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:00.516621" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="code.png"&gt;&lt;img src="code.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${imagename}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-09T19:57:00.361043" elapsed="0.156583"/>
+</kw>
+<arg>code</arg>
+<status status="PASS" start="2024-09-09T19:56:57.359540" elapsed="3.158086"/>
+</kw>
+<kw name="page down">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:00.518624" level="INFO">Sending key(s) ('PAGE_DOWN',) to xpath=//body element.</msg>
+<msg time="2024-09-09T19:57:00.815917" level="INFO">Pressing special key PAGE_DOWN to element.</msg>
+<msg time="2024-09-09T19:57:00.815917" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>xpath=//body</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-09-09T19:57:00.518624" elapsed="0.308290"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:02.828024" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:00.827915" elapsed="2.000109"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:00.517626" elapsed="2.310398"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:56:46.589209" elapsed="16.239836"/>
+</test>
+<test id="s1-t2" name="search for image generation" line="28">
+<kw name="open browser and use edge browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:02.833041" level="INFO">Opening browser 'edge' to base url 'https://www.perplexity.ai/'.</msg>
+<arg>${url}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-09T19:57:02.833041" elapsed="4.305026"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-09T19:57:07.138067" elapsed="0.058009"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:08.197446" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:07.196076" elapsed="1.001370"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:02.832033" elapsed="5.365413"/>
+</kw>
+<kw name="search for anything">
+<kw name="Close Interrupting Element">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:08.222450" level="INFO">Element '//*[@id="__next"]/main/div/div/div[2]/div/div/div[4]/div/div/div[1]/button/div' is displayed.</msg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T19:57:08.198445" elapsed="0.024005"/>
+</kw>
+<msg time="2024-09-09T19:57:08.222450" level="INFO">${element_present} = True</msg>
+<var>${element_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-09T19:57:08.198445" elapsed="0.024005"/>
+</kw>
+<if>
+<branch type="IF" condition="${element_present}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:08.223447" level="INFO">Clicking element '//*[@id="__next"]/main/div/div/div[2]/div/div/div[4]/div/div/div[1]/button/div'.</msg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:57:08.223447" elapsed="0.074005"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:08.222450" elapsed="0.075002"/>
+</branch>
+<status status="PASS" start="2024-09-09T19:57:08.222450" elapsed="0.075002"/>
+</if>
+<status status="PASS" start="2024-09-09T19:57:08.198445" elapsed="0.099007"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath:${searchElement}</arg>
+<arg>10seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T19:57:08.297452" elapsed="0.029006"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:10.326699" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:08.326458" elapsed="2.000241"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:10.326699" level="INFO">Typing text 'I need an image of a cat drinking milk from a pot without the owner's knowledge.' into text field 'xpath://textarea[contains(@placeholder,"Ask anything")]'.</msg>
+<arg>xpath:${searchElement}</arg>
+<arg>${nexttext}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:57:10.326699" elapsed="0.734242"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:11.061941" level="INFO">Clicking element 'xpath://*[@aria-label="Submit"]'.</msg>
+<arg>xpath://*[@aria-label="Submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:57:11.061941" elapsed="0.094517"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:14.157065" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:11.156458" elapsed="3.000607"/>
+</kw>
+<arg>I need an image of a cat drinking milk from a pot without the owner's knowledge.</arg>
+<status status="PASS" start="2024-09-09T19:57:08.197446" elapsed="5.960623"/>
+</kw>
+<kw name="Take screenshot with name">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:17.160518" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:14.160070" elapsed="3.000448"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:18.450763" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="catimage.png"&gt;&lt;img src="catimage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${imagename}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-09T19:57:17.160518" elapsed="1.290245"/>
+</kw>
+<arg>catimage</arg>
+<status status="PASS" start="2024-09-09T19:57:14.158069" elapsed="4.292694"/>
+</kw>
+<kw name="page down">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:18.451763" level="INFO">Sending key(s) ('PAGE_DOWN',) to xpath=//body element.</msg>
+<msg time="2024-09-09T19:57:18.773622" level="INFO">Pressing special key PAGE_DOWN to element.</msg>
+<msg time="2024-09-09T19:57:18.773622" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>xpath=//body</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-09-09T19:57:18.451763" elapsed="2.461934"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:22.915082" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:20.913697" elapsed="2.001385"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:18.451763" elapsed="4.463319"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:02.831029" elapsed="20.085080"/>
+</test>
+<test id="s1-t3" name="search for text" line="34">
+<kw name="open browser and use edge browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:22.920084" level="INFO">Opening browser 'edge' to base url 'https://www.perplexity.ai/'.</msg>
+<arg>${url}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-09T19:57:22.919107" elapsed="4.744897"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-09T19:57:27.664004" elapsed="0.064007"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:28.728099" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:27.728011" elapsed="1.000088"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:22.919107" elapsed="5.808992"/>
+</kw>
+<kw name="search for anything">
+<kw name="Close Interrupting Element">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:28.756111" level="INFO">Element '//*[@id="__next"]/main/div/div/div[2]/div/div/div[4]/div/div/div[1]/button/div' is displayed.</msg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T19:57:28.731108" elapsed="0.025003"/>
+</kw>
+<msg time="2024-09-09T19:57:28.756111" level="INFO">${element_present} = True</msg>
+<var>${element_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-09T19:57:28.730108" elapsed="0.026003"/>
+</kw>
+<if>
+<branch type="IF" condition="${element_present}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:28.757109" level="INFO">Clicking element '//*[@id="__next"]/main/div/div/div[2]/div/div/div[4]/div/div/div[1]/button/div'.</msg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:57:28.756111" elapsed="0.072005"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:28.756111" elapsed="0.072005"/>
+</branch>
+<status status="PASS" start="2024-09-09T19:57:28.756111" elapsed="0.072005"/>
+</if>
+<status status="PASS" start="2024-09-09T19:57:28.730108" elapsed="0.098008"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath:${searchElement}</arg>
+<arg>10seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T19:57:28.828116" elapsed="0.034002"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:30.862273" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:28.862118" elapsed="2.000155"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:30.863015" level="INFO">Typing text 'what is the meaning of prashanth' into text field 'xpath://textarea[contains(@placeholder,"Ask anything")]'.</msg>
+<arg>xpath:${searchElement}</arg>
+<arg>${nexttext}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:57:30.863015" elapsed="0.412559"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:31.276576" level="INFO">Clicking element 'xpath://*[@aria-label="Submit"]'.</msg>
+<arg>xpath://*[@aria-label="Submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:57:31.276576" elapsed="0.099517"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:34.376171" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:31.376093" elapsed="3.000078"/>
+</kw>
+<arg>what is the meaning of prashanth</arg>
+<status status="PASS" start="2024-09-09T19:57:28.729108" elapsed="5.647063"/>
+</kw>
+<kw name="Take screenshot with name">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:37.377247" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:34.377172" elapsed="3.000075"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:37.538711" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="namemeaning.png"&gt;&lt;img src="namemeaning.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${imagename}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-09T19:57:37.377247" elapsed="0.161464"/>
+</kw>
+<arg>namemeaning</arg>
+<status status="PASS" start="2024-09-09T19:57:34.377172" elapsed="3.161539"/>
+</kw>
+<kw name="page down">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:37.540724" level="INFO">Sending key(s) ('PAGE_DOWN',) to xpath=//body element.</msg>
+<msg time="2024-09-09T19:57:37.831025" level="INFO">Pressing special key PAGE_DOWN to element.</msg>
+<msg time="2024-09-09T19:57:37.832025" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>xpath=//body</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-09-09T19:57:37.539716" elapsed="0.300307"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:39.841257" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:37.841023" elapsed="2.000234"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:37.539716" elapsed="2.302049"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:22.918107" elapsed="16.924049"/>
+</test>
+<test id="s1-t4" name="search for Text accuracy" line="44">
+<kw name="open browser and use edge browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:39.844172" level="INFO">Opening browser 'edge' to base url 'https://www.perplexity.ai/'.</msg>
+<arg>${url}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-09T19:57:39.844172" elapsed="4.234051"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-09T19:57:44.078223" elapsed="0.062005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:45.141336" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:44.140228" elapsed="1.001108"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:39.843158" elapsed="5.298178"/>
+</kw>
+<kw name="search for anything">
+<kw name="Close Interrupting Element">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:45.165340" level="INFO">Element '//*[@id="__next"]/main/div/div/div[2]/div/div/div[4]/div/div/div[1]/button/div' is displayed.</msg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T19:57:45.143335" elapsed="0.023007"/>
+</kw>
+<msg time="2024-09-09T19:57:45.166342" level="INFO">${element_present} = True</msg>
+<var>${element_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-09T19:57:45.143335" elapsed="0.023007"/>
+</kw>
+<if>
+<branch type="IF" condition="${element_present}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:45.166342" level="INFO">Clicking element '//*[@id="__next"]/main/div/div/div[2]/div/div/div[4]/div/div/div[1]/button/div'.</msg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:57:45.166342" elapsed="0.069002"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:45.166342" elapsed="0.069002"/>
+</branch>
+<status status="PASS" start="2024-09-09T19:57:45.166342" elapsed="0.069002"/>
+</if>
+<status status="PASS" start="2024-09-09T19:57:45.142336" elapsed="0.093008"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath:${searchElement}</arg>
+<arg>10seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T19:57:45.236344" elapsed="0.029004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:47.265406" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:45.265348" elapsed="2.000058"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:47.266415" level="INFO">Typing text 'i want the text, not for you ,for me that is i need prashanth logo but dont expose to every one keep it private' into text field 'xpath://textarea[contains(@placeholder,"Ask anything")]'.</msg>
+<arg>xpath:${searchElement}</arg>
+<arg>${nexttext}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:57:47.265406" elapsed="0.876464"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:48.142872" level="INFO">Clicking element 'xpath://*[@aria-label="Submit"]'.</msg>
+<arg>xpath://*[@aria-label="Submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:57:48.141870" elapsed="0.113007"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:51.254907" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:48.254877" elapsed="3.000030"/>
+</kw>
+<arg>i want the text, not for you ,for me that is i need prashanth logo but dont expose to every one keep it private</arg>
+<status status="PASS" start="2024-09-09T19:57:45.142336" elapsed="6.112571"/>
+</kw>
+<kw name="Take screenshot with name">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:54.256191" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:51.255916" elapsed="3.000275"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:54.409017" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="textaccuracy.png"&gt;&lt;img src="textaccuracy.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${imagename}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-09T19:57:54.256191" elapsed="0.152826"/>
+</kw>
+<arg>textaccuracy</arg>
+<status status="PASS" start="2024-09-09T19:57:51.254907" elapsed="3.154110"/>
+</kw>
+<kw name="page down">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:54.410997" level="INFO">Sending key(s) ('PAGE_DOWN',) to xpath=//body element.</msg>
+<msg time="2024-09-09T19:57:54.781048" level="INFO">Pressing special key PAGE_DOWN to element.</msg>
+<msg time="2024-09-09T19:57:54.781048" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>xpath=//body</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-09-09T19:57:54.409995" elapsed="0.384569"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:57:56.795738" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:57:54.795564" elapsed="2.000174"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:54.409995" elapsed="2.385743"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:39.843158" elapsed="16.952580"/>
+</test>
+<test id="s1-t5" name="search language transalation" line="49">
+<kw name="open browser and use edge browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:57:56.799742" level="INFO">Opening browser 'edge' to base url 'https://www.perplexity.ai/'.</msg>
+<arg>${url}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-09T19:57:56.798741" elapsed="4.655190"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-09T19:58:01.454932" elapsed="0.080520"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:58:02.536826" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:58:01.535452" elapsed="1.001374"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:56.798741" elapsed="5.738085"/>
+</kw>
+<kw name="search for anything">
+<kw name="Close Interrupting Element">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:02.569342" level="INFO">Element '//*[@id="__next"]/main/div/div/div[2]/div/div/div[4]/div/div/div[1]/button/div' is displayed.</msg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T19:58:02.537825" elapsed="0.031517"/>
+</kw>
+<msg time="2024-09-09T19:58:02.569342" level="INFO">${element_present} = True</msg>
+<var>${element_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-09T19:58:02.537825" elapsed="0.031517"/>
+</kw>
+<if>
+<branch type="IF" condition="${element_present}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:02.570340" level="INFO">Clicking element '//*[@id="__next"]/main/div/div/div[2]/div/div/div[4]/div/div/div[1]/button/div'.</msg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:58:02.570340" elapsed="0.105055"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:58:02.569342" elapsed="0.106053"/>
+</branch>
+<status status="PASS" start="2024-09-09T19:58:02.569342" elapsed="0.107052"/>
+</if>
+<status status="PASS" start="2024-09-09T19:58:02.537825" elapsed="0.138569"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath:${searchElement}</arg>
+<arg>10seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T19:58:02.676394" elapsed="0.031514"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:58:04.709459" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:58:02.707908" elapsed="2.001551"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:04.710463" level="INFO">Typing text 'translate this to telugu "hi how are you"' into text field 'xpath://textarea[contains(@placeholder,"Ask anything")]'.</msg>
+<arg>xpath:${searchElement}</arg>
+<arg>${nexttext}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:58:04.709459" elapsed="0.549777"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:05.259236" level="INFO">Clicking element 'xpath://*[@aria-label="Submit"]'.</msg>
+<arg>xpath://*[@aria-label="Submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:58:05.259236" elapsed="0.115031"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:58:08.375317" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:58:05.375265" elapsed="3.000052"/>
+</kw>
+<arg>translate this to telugu "hi how are you"</arg>
+<status status="PASS" start="2024-09-09T19:58:02.536826" elapsed="5.838491"/>
+</kw>
+<kw name="Take screenshot with name">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:58:11.377389" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:58:08.376321" elapsed="3.001068"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:11.534940" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="translation.png"&gt;&lt;img src="translation.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${imagename}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-09T19:58:11.377389" elapsed="0.157551"/>
+</kw>
+<arg>translation</arg>
+<status status="PASS" start="2024-09-09T19:58:08.376321" elapsed="3.159621"/>
+</kw>
+<kw name="page down">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:11.536943" level="INFO">Sending key(s) ('PAGE_DOWN',) to xpath=//body element.</msg>
+<msg time="2024-09-09T19:58:11.833821" level="INFO">Pressing special key PAGE_DOWN to element.</msg>
+<msg time="2024-09-09T19:58:11.834818" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>xpath=//body</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-09-09T19:58:11.536943" elapsed="0.306875"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:58:13.844907" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:58:11.844820" elapsed="2.000087"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:58:11.535942" elapsed="2.308965"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:57:56.796739" elapsed="17.048168"/>
+</test>
+<test id="s1-t6" name="search for the story and ask questions in followup" line="58">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:13.847930" level="INFO">Opening browser 'edge' to base url 'https://www.perplexity.ai/'.</msg>
+<arg>${url}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-09T19:58:13.847930" elapsed="4.619438"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-09T19:58:18.467368" elapsed="0.081004"/>
+</kw>
+<kw name="Close Interrupting Element">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:19.090976" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-09-09T19:58:19.090976" level="FAIL">Element with locator '//*[@id="__next"]/main/div/div/div[2]/div/div/div[4]/div/div/div[1]/button/div' not found.</msg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-09-09T19:58:18.550372" elapsed="0.549602">Element with locator '//*[@id="__next"]/main/div/div/div[2]/div/div/div[4]/div/div/div[1]/button/div' not found.</status>
+</kw>
+<msg time="2024-09-09T19:58:19.100974" level="INFO">${element_present} = False</msg>
+<var>${element_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-09T19:58:18.550372" elapsed="0.550602"/>
+</kw>
+<if>
+<branch type="IF" condition="${element_present}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-09T19:58:19.100974" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-09T19:58:19.100974" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-09-09T19:58:19.100974" elapsed="0.000000"/>
+</if>
+<status status="PASS" start="2024-09-09T19:58:18.549372" elapsed="0.551602"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath:${searchElement}</arg>
+<arg>10seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T19:58:19.101975" elapsed="0.048004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:58:21.151028" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:58:19.149979" elapsed="2.001049"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:21.152033" level="INFO">Typing text 'hi how are you?' into text field 'xpath://textarea[contains(@placeholder,"Ask anything")]'.</msg>
+<arg>xpath:${searchElement}</arg>
+<arg>hi how are you?</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:58:21.151028" elapsed="0.219662"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:21.371689" level="INFO">Clicking element 'xpath://*[@aria-label="Submit"]'.</msg>
+<arg>xpath://*[@aria-label="Submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:58:21.371689" elapsed="0.103087"/>
+</kw>
+<kw name="Take screenshot with name">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:58:24.477300" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:58:21.476776" elapsed="3.000524"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:24.645346" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="followup1.png"&gt;&lt;img src="followup1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${imagename}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-09T19:58:24.477300" elapsed="0.169047"/>
+</kw>
+<arg>followup1</arg>
+<status status="PASS" start="2024-09-09T19:58:21.475779" elapsed="3.170568"/>
+</kw>
+<kw name="Close Interrupting Element">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:24.828373" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-09-09T19:58:24.829373" level="FAIL">Element with locator '//*[@id="__next"]/main/div/div/div[2]/div/div/div[4]/div/div/div[1]/button/div' not found.</msg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-09-09T19:58:24.647346" elapsed="0.183031">Element with locator '//*[@id="__next"]/main/div/div/div[2]/div/div/div[4]/div/div/div[1]/button/div' not found.</status>
+</kw>
+<msg time="2024-09-09T19:58:24.830377" level="INFO">${element_present} = False</msg>
+<var>${element_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-09-09T19:58:24.647346" elapsed="0.183031"/>
+</kw>
+<if>
+<branch type="IF" condition="${element_present}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${INTERRUPTING_ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-09-09T19:58:24.831373" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-09T19:58:24.831373" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-09-09T19:58:24.830377" elapsed="0.000996"/>
+</if>
+<status status="PASS" start="2024-09-09T19:58:24.647346" elapsed="0.185155"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath:${followsearchElement}</arg>
+<arg>10seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T19:58:24.832501" elapsed="0.026004"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:24.859503" level="INFO">Typing text 'i want to ask you the story of dog and cat' into text field 'xpath://*[@placeholder="Ask follow-up"]'.</msg>
+<arg>xpath:${followsearchElement}</arg>
+<arg>i want to ask you the story of dog and cat</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:58:24.858505" elapsed="0.359622"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:25.219125" level="INFO">Clicking element 'xpath://*[@aria-label="Submit"]'.</msg>
+<arg>xpath://*[@aria-label="Submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T19:58:25.219125" elapsed="0.117016"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:58:28.337410" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:58:25.337140" elapsed="3.000270"/>
+</kw>
+<kw name="Take screenshot with name">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:58:31.338998" level="INFO">Slept 3 seconds.</msg>
+<arg>3seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:58:28.338869" elapsed="3.000129"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:31.518519" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="story.png"&gt;&lt;img src="story.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${imagename}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-09T19:58:31.338998" elapsed="0.180404"/>
+</kw>
+<arg>story</arg>
+<status status="PASS" start="2024-09-09T19:58:28.337410" elapsed="3.181992"/>
+</kw>
+<kw name="page down">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:31.520404" level="INFO">Sending key(s) ('PAGE_DOWN',) to xpath=//body element.</msg>
+<msg time="2024-09-09T19:58:31.809155" level="INFO">Pressing special key PAGE_DOWN to element.</msg>
+<msg time="2024-09-09T19:58:31.809155" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>xpath=//body</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-09-09T19:58:31.520404" elapsed="0.299750"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-09T19:58:33.821211" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-09T19:58:31.820154" elapsed="2.001057"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:58:31.519402" elapsed="2.301809"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-09T19:58:33.988579" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../Desktop/screenshots/scrollpage.png"&gt;&lt;img src="../../../Desktop/screenshots/scrollpage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>C:\\Users\\tai-0\\OneDrive\\Desktop\\screenshots\\scrollpage.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-09T19:58:33.821211" elapsed="0.167368"/>
+</kw>
+<status status="PASS" start="2024-09-09T19:58:13.846943" elapsed="20.142638"/>
+</test>
+<doc>This is a test suite for demonstration purposes.</doc>
+<status status="PASS" start="2024-09-09T19:56:46.121115" elapsed="107.869465"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Genai">Genai</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
